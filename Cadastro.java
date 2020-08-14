@@ -45,11 +45,11 @@ public class Cadastro {
 		JOptionPane.showMessageDialog(null, "Faça Login.", "Login.", JOptionPane.PLAIN_MESSAGE);
 		String email = JOptionPane.showInputDialog(null, "Insira seu e-mail:", "Login.", JOptionPane.PLAIN_MESSAGE);
 		String senha = JOptionPane.showInputDialog(null, "Insira sua senha:", "Login.", JOptionPane.PLAIN_MESSAGE);
-		do {
+		while (email.equals(laranja3[0])== false || senha.equals(laranja2[0])==false) {
 			JOptionPane.showMessageDialog(null, "Nome de usuário/senha incorretos.");
 			email = JOptionPane.showInputDialog(null, "Insira seu e-mail:", "Login.",JOptionPane.PLAIN_MESSAGE);
 			senha = JOptionPane.showInputDialog(null, "Insira sua senha:", "Login.", JOptionPane.PLAIN_MESSAGE);
-		} while (email.equals(laranja3[0])== false || senha.equals(laranja2[0])==false);
+		} 
 		JOptionPane.showMessageDialog(null, "Login confirmado Sr(a) " + laranja1[0] + "!\nSeu CPF é:"+IntegridadeCPF.imprimeCPF(laranja4[0]), "Login.", JOptionPane.PLAIN_MESSAGE);
 	}
 }
